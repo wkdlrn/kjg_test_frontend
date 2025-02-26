@@ -1,13 +1,15 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-const backend = "/api";
-
 export const useBoardStore = defineStore("board", {
+  state: () => ({
+    response: null,
+  }),
   actions: {
     async getBoardList() {
-      const response = await axios.get(backend + "/board/list");
-      console.log(response.data);
+      const response = await axios.get("/api/board/list");
+
+      this.response = response.data;
       return response.data;
     },
   },
