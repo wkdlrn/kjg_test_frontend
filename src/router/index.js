@@ -9,7 +9,12 @@ const router = createRouter({
     },
     { 
       path: '/board/:idx', 
-      component: () => import("@/pages/BoardDetail.vue") },
+      component: () => import("@/pages/BoardDetail.vue"),
+     },
+     { 
+      path: '/board/register', 
+      component: () => import("@/pages/BoardRegister.vue"),
+     },
   ],
 });
 export default router;

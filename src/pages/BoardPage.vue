@@ -23,6 +23,10 @@ const goToDetail = (idx) => {
     router.push(`/board/${idx}`);
 };
 
+const goToWrite = () => {
+    router.push("/board/register");
+};
+
 onMounted(() => {
     getBoardList();
 });
@@ -31,6 +35,7 @@ onMounted(() => {
 <template>
     <div>
         <h2>게시판</h2>
+        <button @click="goToWrite" class="write-btn">게시글 작성</button>
         <p v-if="boardList.length === 0">불러오는 중...</p>
 
         <div v-else>
@@ -51,6 +56,7 @@ onMounted(() => {
     margin-bottom: 10px;
     cursor: pointer;
 }
+
 .boards:hover {
     background-color: #f8f8f8;
 }

@@ -18,5 +18,11 @@ export const useBoardStore = defineStore("board", {
       this.response = response.data;
       return response.data;
     },
+    async registerBoard(postData) {
+      const response = await axios.post("/api/board/register", postData);
+
+      this.response = response.data;
+      return response.data;
+    },
   },
 });
