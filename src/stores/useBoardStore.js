@@ -12,5 +12,11 @@ export const useBoardStore = defineStore("board", {
       this.response = response.data;
       return response.data;
     },
+    async getBoardDetail(idx) {
+      const response = await axios.get(`/api/board/read/${idx}`);
+
+      this.response = response.data;
+      return response.data;
+    },
   },
 });

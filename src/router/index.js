@@ -7,6 +7,9 @@ const router = createRouter({
       path: "/",
       component: () => import("@/pages/BoardPage.vue"),
     },
+    { 
+      path: '/board/:idx', 
+      component: () => import("@/pages/BoardDetail.vue") },
   ],
 });
 export default router;
