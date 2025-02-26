@@ -1,9 +1,12 @@
 <script setup>
-
+defineProps({
+  board: Object
+});
 </script>
 
 <template>
-  <router-view></router-view>
+
+
 </template>
 
 <style scoped>
