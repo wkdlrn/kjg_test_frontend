@@ -30,10 +30,10 @@ onMounted(() => {
 
         <div v-else>
             <div v-for="board in boardList" :key="board.idx" class="boards">
-                <div>{{ board.idx }}</div>
-                <div>{{ board.title }}</div>
-                <div>{{ board.content }}</div>
-                <div>{{ board.writer }}</div>
+                <div>제목 : {{ board.title }}</div>
+                <div>내용 : {{ board.content }}</div>
+                <div>작성자 : {{ board.writer }}</div>
+                <div>댓글의 수 : {{ board.commentCount  }}</div>
             </div>
         </div>
     </div>
