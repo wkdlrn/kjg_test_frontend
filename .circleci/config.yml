@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   frontend-build-and-push:
     docker:
-      - image: cimg/base:2022.09
+      - image: cimg/node:18.18
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
@@ -16,8 +16,6 @@ jobs:
       - run:
           name: Build frontend
           command: npm run build
-      - attach_workspace:
-          at: ~/project
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
