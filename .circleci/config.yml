@@ -35,8 +35,4 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - gradle-build
-      - docker-backend-build-and-push:
-          requires:
-            - gradle-build
       - frontend-build-and-push
