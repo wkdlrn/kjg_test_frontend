@@ -10,16 +10,16 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           name: Install dependencies
           command: npm install
       - run:
           name: Build frontend
           command: npm run build
+      - attach_workspace:
+          at: ~/project
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run:
           name: Build Docker image (Frontend with Nginx)
           command: |
