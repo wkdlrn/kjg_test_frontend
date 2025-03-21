@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   frontend-build-and-push:
     docker:
-      - image: cimg/node:18.18.2
+      - image: cimg/node:20.18.1
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
