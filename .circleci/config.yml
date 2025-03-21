@@ -22,12 +22,12 @@ jobs:
           name: Build Docker image (Frontend with Nginx)
           command: |
             TAG=0.1.$CIRCLE_BUILD_NUM
-            docker build -t $DOCKERHUB_USERNAME/0321frontend:$TAG -f Dockerfile.nginx .
+            docker build -t $DOCKERHUB_USERNAME/0321front:$TAG -f Dockerfile.nginx .
       - run:
           name: Push Docker image (Frontend)
           command: |
             TAG=0.1.$CIRCLE_BUILD_NUM
-            docker push $DOCKERHUB_USERNAME/0321frontend:$TAG
+            docker push $DOCKERHUB_USERNAME/0321front:$TAG
 
 workflows:
   version: 2
