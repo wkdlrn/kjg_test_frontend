@@ -1,9 +1,7 @@
-# This config was automatically generated from your source code
-# Stacks detected: cicd:jenkins:.,deps:java:.,tool:gradle:
 version: 2.1
 
 jobs:
-   frontend-build-and-push:
+  frontend-build-and-push:
     docker:
       - image: cimg/node:18.18.2
         auth:
